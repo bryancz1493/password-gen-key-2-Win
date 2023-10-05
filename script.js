@@ -1,8 +1,8 @@
 // Assignment code here
-function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNumberic, useSpecialCharacters) {
+function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters) {
     var LowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
     var UpperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var NumbericCharacters = "1234567890";
+    var NumericCharacters = "1234567890";
     var SpecialCharacters = "!@#$%^&*()_-+=";
 
     let charset = "";
@@ -13,7 +13,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
         charset += UpperCaseCharacters;
     }
     if (charset === "useNumberic") {
-        charset += NumbericCharacters;
+        charset += NumericCharacters;
     }
     if (charset === "useSpecialCharacters") {
         charset += SpecialCharacters;
@@ -36,25 +36,25 @@ var minLength = 8;
 var maxLength = 128;
 var useLowerCase = confirm("Include lowercase characters?");
 var useUpperCase = confirm("Include uppercase characters?");
-var useNumberic = confirm("Include numberic characters?");
+var useNumeric = confirm("Include numeric characters?");
 var useSpecialCharacters = confirm("Include special characters?");
 
-var password = generatePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumberic, useSpecialCharacters);
-var passwordText = document.querySelector("#password");
+var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
 console.log(password);
 
+var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+//var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 //function writePassword() {
   //var password = generatePassword();
   //var passwordText = document.querySelector("#password");
 
-  var passwordText.value = password;
+  //var passwordText.value = password;
 
 //}
 
