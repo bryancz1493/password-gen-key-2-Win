@@ -39,12 +39,14 @@ var useUpperCase = confirm("Include uppercase characters?");
 var useNumeric = confirm("Include numeric characters?");
 var useSpecialCharacters = confirm("Include special characters?");
 
-var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
-console.log(password);
-
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
-
+    try {
+        var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
+        console.log(password);
+    } catch (error) {
+        console.error(error.message);
+    }
 
 // Get references to the #generate element
 //var generateBtn = document.querySelector("#generate");
