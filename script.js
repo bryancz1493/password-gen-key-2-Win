@@ -3,7 +3,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     var LowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
     var UpperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var NumericCharacters = "1234567890";
-    var SpecialCharacters = "!@#$%^&*()_-+=";
+    var SpecialCharacters =  "~`!@#$%^&*()_-+={[}]:;<,>.?/";
 
     let charset = "";
     if (charset === "useLowerCase") {
