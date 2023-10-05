@@ -22,6 +22,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
         throw new Error ("Must pick at least one character type to proceed");
     }
 
+    var password = "";
     var passwordLength = Math.floor(Math.random() * (maxLength - minLength)) + minLength;
     for (i =0; i < passwordLength; i++) {
         var randomPass = Math.floor(Math.random() * charset.length);
