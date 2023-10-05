@@ -18,7 +18,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     if (charset === "useSpecialCharacters") {
         charset += SpecialCharacters;
     }
-    if (charset.length !== 0) {
+    if (charset.length !== 1) {
         throw new Error ("Must pick at least one character type to proceed");
     }
 
