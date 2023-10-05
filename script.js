@@ -12,13 +12,13 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     if (charset === "useUpperCase") {
         charset += UpperCaseCharacters;
     }
-    if (charset === "useNumberic") {
+    if (charset === "useNumeric") {
         charset += NumericCharacters;
     }
     if (charset === "useSpecialCharacters") {
         charset += SpecialCharacters;
     }
-    if (charset.length !== 1) {
+    if (charset.length === 0) {
         throw new Error ("Must pick at least one character type to proceed");
     }
 
@@ -44,7 +44,7 @@ generateBtn.addEventListener("click", writePassword);
     var useLowerCase = confirm("Include lowercase characters?");
     var useUpperCase = confirm("Include uppercase characters?");
     var useNumeric = confirm("Include numeric characters?");
-var useSpecialCharacters = confirm("Include special characters?");
+    var useSpecialCharacters = confirm("Include special characters?");
     try {
         var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
         console.log(password);
