@@ -29,21 +29,22 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
         password += charset[randomPass];
     }
     
-    return password;
+    var passwordText = document.querySelector("#password");
+    var textArea = document.getElementById("password");
+    passwordText.textArea = "Generate a password" + password;
 }
 
-// Add prompt for each character type
-var minLength = 8;
-var maxLength = 128;
-var useLowerCase = confirm("Include lowercase characters?");
-var useUpperCase = confirm("Include uppercase characters?");
-var useNumeric = confirm("Include numeric characters?");
-var useSpecialCharacters = confirm("Include special characters?");
-
-var passwordText = document.querySelector("#password");
-var textArea = document.getElementById("password");
+//var passwordText = document.querySelector("#password");
+//var textArea = document.getElementById("password");
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
+    // Add prompt for each character type
+    var minLength = 8;
+    var maxLength = 128;
+    var useLowerCase = confirm("Include lowercase characters?");
+    var useUpperCase = confirm("Include uppercase characters?");
+    var useNumeric = confirm("Include numeric characters?");
+var useSpecialCharacters = confirm("Include special characters?");
     try {
         var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
         console.log(password);
