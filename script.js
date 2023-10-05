@@ -41,7 +41,7 @@ var useNumeric = confirm("Include numeric characters?");
 var useSpecialCharacters = confirm("Include special characters?");
 
 var passwordText = document.querySelector("#password");
-var textArea = document.getElementById("#password");
+var textArea = document.getElementById("password");
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
     try {
