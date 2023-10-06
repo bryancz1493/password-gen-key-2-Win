@@ -20,6 +20,8 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     }
     if (charset.length === 0) {
         throw new Error ("Must pick at least one character type to proceed");
+    } else {
+        return password;
     }
 
     var password = "";
