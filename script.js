@@ -1,5 +1,6 @@
 // Assignment code here
 function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters) {
+    // Application State
     var LowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
     var UpperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var NumericCharacters = "1234567890";
@@ -36,10 +37,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     textArea.passwordText = password;
 }
 
-//function 
-
-var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
+function generateAndPrompts () {
     // Add prompt for each character type
     var minLength = 8;
     var maxLength = 128;
@@ -53,6 +51,10 @@ generateBtn.addEventListener("click", writePassword);
     } catch (error) {
         console.error(error.message);
     }
+}
+
+var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", writePassword);
 
 // Get references to the #generate element
 //var generateBtn = document.querySelector("#generate");
