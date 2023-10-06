@@ -33,10 +33,10 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     
     var passwordText = document.querySelector("#password");
     var textArea = document.getElementById("password");
-    passwordText.textArea = "Generate a password" + password;
+    textArea.passwordText = password;
 }
 
-function 
+//function 
 
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
