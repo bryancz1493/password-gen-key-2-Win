@@ -30,6 +30,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     for (i =0; i < passwordLength; i++) {
         var randomPass = Math.floor(Math.random() * charset.length);
         password += charset[randomPass];
+        return randomPass;
     }
     
     var passwordText = document.querySelector("#password");
@@ -54,7 +55,7 @@ function generateAndPrompts () {
 }
 
 var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", generateAndPrompts);
 
 // Get references to the #generate element
 //var generateBtn = document.querySelector("#generate");
