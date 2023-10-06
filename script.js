@@ -24,7 +24,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
         return password;
     }
 
-    var password = "";
+    let password = "";
     var passwordLength = Math.floor(Math.random() * (maxLength - minLength)) + minLength;
     for (i =0; i < passwordLength; i++) {
         var randomPass = Math.floor(Math.random() * charset.length);
@@ -36,8 +36,8 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     passwordText.textArea = "Generate a password" + password;
 }
 
-//var passwordText = document.querySelector("#password");
-//var textArea = document.getElementById("password");
+function 
+
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
     // Add prompt for each character type
