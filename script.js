@@ -20,7 +20,7 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
         charset += SpecialCharacters;
     }
     if (charset.length === 0) {
-        throw new Error ("Must pick at least one character type to proceed");
+        throw prompt ("Must pick at least one character type to proceed");
     } else {
         return password;
     }
