@@ -30,12 +30,12 @@ function writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNum
     for (i =0; i < passwordLength; i++) {
         var randomPass = Math.floor(Math.random() * charset.length);
         password += charset[randomPass];
-        return randomPass;
     }
     
-    var passwordText = document.querySelector("#password");
-    var textArea = document.getElementById("password");
-    textArea.passwordText = password;
+    return randomPass;
+    //var passwordText = document.querySelector("#password");
+    //var textArea = document.getElementById("password");
+    //textArea.passwordText = password;
 }
 
 function generateAndPrompts () {
@@ -47,7 +47,7 @@ function generateAndPrompts () {
     var useNumeric = confirm("Include numeric characters?");
     var useSpecialCharacters = confirm("Include special characters?");
     try {
-        var password = writePassword(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
+        var password = writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
         console.log(password);
     } catch (error) {
         console.error(error.message);
