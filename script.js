@@ -55,9 +55,7 @@ function generatePassword () {
     var useNumeric = confirm("Include numeric characters?");
     var useSpecialCharacters = confirm("Include special characters?");
     try {
-        // var password = writePassword (minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
         var password = generateAndPrompts(minLength, maxLength, useLowerCase, useUpperCase, useNumeric, useSpecialCharacters);
-        console.log(password);
         return password;
     } catch (error) {
         console.error(error.message);
